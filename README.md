@@ -1,5 +1,9 @@
 # 🌟 Hackbight Prep Course Final Project 🍎
 
+def(procrastinate):
+
+  pass
+
 ## 🧚‍♀️ Choose Your Own Adventure Game 🚀
 
 ### 🃏 Overview 👨‍👩‍👦
