@@ -1,0 +1,35 @@
+# # author: alix
+# # choose your own adventure
+
+# Show welcome message (Hello welcome to your adventure; goal:_[h is the right path end])
+# Show instuctions / options for actions
+# Ask user what they would like to do(a or b)
+# define a function with the game
+# ask for input of name
+# ask user if they want to bring a friend
+# take in input of friend to bring
+# start a while loop
+#   if user chooses option a
+#     then print something
+#     give option (c or d)
+#       if user chooses option c
+#         print something
+#         give options g or h 
+#           if user chooses g
+#           print YOU DIED HAHA
+#           if user chooses option h 
+#           add in a while loop for a shoot out
+#           and then the goal is acheived!!!!
+#             BREAK
+#         if user chooses option d
+#   if user chooses option b
+#     then print something else
+#     give options (e or f)
+#     if choose e
+#       break 
+#     if choose f 
+#       break (bc slipped on banana)
+# use the function 
+
+# print Restart?
+# have input variable mean you get to restart

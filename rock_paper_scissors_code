@@ -1,0 +1,92 @@
+import random
+import time
+def rock_paper_scissors():
+  player1_score = 0
+  comp_score = 0
+  while True:
+    options =['Rock', 'Paper', 'Scissors']
+    options2 = ['R', 'P', 'S']
+    print("Choose your Champion: ROCK, PAPER, or SCISSORS")
+    print("Type 'R' for Rock, 'P' for Paper, and 'S' for Scissors, or 'Q' to quit.")
+    print()
+    player1 = input("> ")
+    player1 = player1.upper()
+    if player1 not in options2:
+      print("Please choose only ROCK, PAPER, or SCISSORS.")
+    comp = random.choice(options)
+    print()
+    if player1 == "R":
+      print("Your Champion: Rock")
+      if comp == "Paper":
+        print("Computer's Champion: Paper")
+        print()
+        time.sleep(0.5)
+        print("Computer wins!")
+        comp_score += 1
+      if comp == "Scissors":
+        print("Computer's Champion: Scissors")
+        print()
+        time.sleep(0.5)
+        print("You win!")
+        player1_score += 1
+      if comp == "Rock":
+        print("Computer's Champion: Rock")
+        print()
+        time.sleep(0.5)
+        print("It's a tie.")
+    if player1 == "P":
+      print("Your Champion: Paper")
+      if comp == "Paper":
+        print("Computer's Champion: Paper")
+        time.sleep(0.5)
+        print()
+        print("It's a tie.")
+      if comp == "Scissors":
+        print("Computer's Champion: Scissors")
+        time.sleep(0.5)
+        print()
+        print("Computer wins!")
+        comp_score += 1
+      if comp == "Rock":
+        print("Computer's Champion: Rock")
+        time.sleep(0.5)
+        print()
+        print("You win!") 
+        player1_score += 1
+    if player1 == "S":
+      print("Your Champion: Scissors")
+      if comp == "Rock":
+        print("Computer's Champion: Rock")
+        time.sleep(0.5)
+        print()
+        print("Computer wins!")
+        comp_score += 1
+      if comp == "Paper":
+        print("Computer's Champion: Paper")
+        time.sleep(0.5)
+        print()
+        print("You win!")
+        player1_score += 1
+      if comp == "Scissors":
+        print("Computer's Champion: Scissors")
+        time.sleep(0.5)
+        print()
+        print("It's a tie.")
+    print()
+    print(f"Your overall wins: {player1_score}")
+    print(f"Computer's overall wins: {comp_score}")
+    print()
+    if player1 == "Q":
+      break
+
+  print("Final Scores: ")
+  print(f"You: {player1_score}")
+  print(f"Computer: {comp_score}")
+  if player1_score > comp_score:
+    print("You are the Overall Champion!")
+  if comp_score < player1_score:
+    print("Computer is the Overall Champion!")
+  else:
+    print("You and computer tied for Overall Champion!")
+  print("Thanks for playing!")
+rock_paper_scissors()

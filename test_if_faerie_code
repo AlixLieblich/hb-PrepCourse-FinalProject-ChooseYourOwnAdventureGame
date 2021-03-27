@@ -1,0 +1,47 @@
+# def (ask Question)
+
+# def (check answer)
+
+# def (play)
+while True:
+  bleh=input("> ")
+  if bleh == "b":
+          
+      questions = [
+        "q1, a or b",
+        "q2, a or b",
+        "q3, a or b"
+      ]
+      answers=[
+        "a",
+        "b",
+        "c"
+      ]
+
+      def check_answer():
+        result=0
+        j = 0
+        for i in questions:
+          print(i)
+          answer=input("> ")
+          # i=int(i)
+          if answer == answers[j]:
+            result+=1
+            print(result)
+          j+=1
+        return result
+
+      def play():
+        i=0
+        while i < 1:
+          answers_correct=check_answer()
+          if answers_correct > 1:
+            print("You have a cold heart. Let me stop it for you.")
+          if answers_correct <= 1:
+            print("You seem to be a good soul, I'll give you the option to turn back now.")
+          # print(f"You got {answers_correct} out of {len(questions)} questions right")
+          i+=1
+          break
+
+      play()
+      break

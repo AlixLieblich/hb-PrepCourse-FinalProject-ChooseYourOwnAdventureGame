@@ -1,0 +1,92 @@
+def chooseAdventure():
+
+  print("Welcome statement")
+  print("-----------------")
+  print("This is the deal and to make it to option h is the only way to survive; GOOD LUCK.")
+  choice = ("OPTION: BEGIN OR CURL")
+  print(choice)
+  option = input("> ")
+  option = option.upper()
+  notebook=[]
+  while True:
+    if option == "NOTEBOOK":
+      print("Pocket Sized Spiral Bound Notebook")
+      print("-----------------")
+      while True:
+        print("You can ADD / VIEW / CLOSE notebook.")
+        option = input("> ")
+        option = option.upper()
+        if option == "CLOSE":
+          print("Narrator: You close your notebook and stash it in your pocket.")
+          # print("Please choose between your two previous capitalized options.")
+          print(choice)
+          option = input("> ")
+          option = option.upper()
+          break
+        if option == "ADD":
+          print("Narrator: What observation would you like to add to your notebook?")
+          obser = input("> ")
+          notebook.append(obser)
+          print(f"You added: {obser}")
+        if option == "VIEW":
+          print("My Observations:")
+          for observations in notebook:
+            print(observations)
+    elif option =="GO BACK":
+      choice = ("EXIT OR EXPLORE?")
+      print(choice)
+      option=input("> ")
+      option = option.upper()
+    elif option == "BEGIN":
+      choice = ("EXIT OR EXPLORE")
+      print(choice)
+      option=input("> ")
+      option = option.upper()
+    elif option =="EXPLORE":
+      choice = ("FAERIE OR GO BACK")
+      print(choice)
+      option=input("> ")
+      option = option.upper()
+    elif option=="EXIT":
+      choice = ("MARS OR GO BACK?")
+      print(choice)
+      option=input("> ")
+      option = option.upper()
+    elif option =="FAERIE":
+      choice = ("GO BACK OR GAME?")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+    elif option =="CURL":
+      print("YOU DIE")
+      break
+    elif option =="MARS":
+      choice = ("COMMIT OR GO BACK")
+      print(choice)
+      option=input("> ")
+      option = option.upper()
+    elif option=="GAME":
+      print("GAME OVER")
+      break
+    elif option=="COMMIT":
+      print("VICTORY")
+      break
+    else:
+      if option != "begin":
+        print("That is not one of your options.")
+        print(choice)
+        option = input("> ")
+        option = option.upper()
+    
+    
+
+chooseAdventure()
+
+while True:
+  print("would you like to play again?")
+  playAgain= input("yes or no: ")
+  playAgain = playAgain.upper()
+  if playAgain == "YES":
+    chooseAdventure()
+  else:
+    break

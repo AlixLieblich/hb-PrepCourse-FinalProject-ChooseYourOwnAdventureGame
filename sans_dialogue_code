@@ -1,0 +1,298 @@
+# author: Alix Lieblich
+
+import time
+import random
+
+def chooseAdventure():
+    ### function to create a game
+  import time
+  print("Narrator: You find that you are tired, scared and cold, and have no clue who you are or how you came to be here.")
+  time.sleep(2)
+  print()
+  choice = ("OPTION: Do you BEGIN the journey to find out who you are, or do you CURL up in a ball on the floor?")
+  print(choice)
+  option = input("> ")
+  option = option.upper()
+  notebook=[]
+  while True:
+    if option == "NOTEBOOK":
+      print("Pocket Sized Spiral Bound Notebook")
+      print("-----------------")
+      while True:
+        print("You can ADD / VIEW / CLOSE notebook.")
+        option = input("> ")
+        option = option.upper()
+        if option == "CLOSE":
+          print("Narrator: You close your notebook and stash it in your pocket.")
+          print(choice)
+          option = input("> ")
+          option = option.upper()
+          break
+        if option == "ADD":
+          print("Narrator: What observation would you like to add to your notebook?")
+          obser = input("> ")
+          notebook.append(obser)
+          print(f"You added: {obser}")
+        if option == "VIEW":
+          print("My Observations:")
+          for observations in notebook:
+            print(observations)
+    elif option == "GO BACK":
+      choice = ("OPTION: You now have the option to EXIT the cave or EXPLORE the tunnel from the cave.")
+      print(choice)
+      option=input("> ")
+      option=option.upper()
+    elif option == "BEGIN":
+      print("OPTION: You find a mouth to exit the cave, but you also find a tunnel that goes deeper, lit with gas lamps. You know have the choice to EXIT, EXPLORE, or add clues to your NOTEBOOK.")
+      choice = ("OPTION: Would you like to EXIT, EXPLORE, or add clues to your NOTEBOOK?")
+      option = input("> ")
+      option = option.upper()
+    elif option == "EXPLORE":
+      choice = ("OPTION: Do you choose to go to the LEFT, RIGHT, or GO BACK? >")
+      print(choice)
+      option=input("> ")
+      option=option.upper()
+    elif option == "LEFT":
+      choice = ("OPTION: Do you go to the RIGHT, towards the unfamiliar sound of others and smell of food? Or would you like to GO BACK to the original mouth of the cave?")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+      print("-----------------")
+    elif option == "RIGHT":
+      choice = ("OPTION: You can SPEAK with them, or run for your life and GO BACK the way you came.")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+    elif option == "SPEAK":
+      choice = ("OPTION: Would you like to respond ONE: 'I don't know who I am. I just woke in this tunnel. I'm trying to figure out who I am.' Or TWO: 'Who are YOU? Or, WHAT are you? What is the land of the Fae?'")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+    elif option == "ONE":
+      choice = ("OPTION: Do you take the TEST or do you GO BACK the way you came?")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+    elif option == "TEST":
+      questions = [
+      "q1, a or b",
+      "q2, a or b",
+      "q3, a or b"
+    ]
+      answers=[
+      "a",
+      "b",
+      "c"
+    ]
+      def check_answer():
+        result=0
+        j = 0
+        for i in questions:
+          print(i)
+          answer=input("> ")
+          # i=int(i)
+          if answer == answers[j]:
+            result+=1
+            print(result)
+          j+=1
+        return result
+      def play():
+        i=0
+        while i < 1:
+          answers_correct=check_answer()
+          if answers_correct > 1:
+            print("GAME OVER")
+
+          i+=1
+          break
+
+      play()
+      break
+    elif option == "TWO":
+      choice = ("OPTION: Do you take the TEST or do you GO BACK the way you came?")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+    elif option == "EXIT":
+      print("OPTION: You can now add to your NOTEBOOK, ENTER the Silicon Valley, to see why it feels familiar to you, or you can you can GO BACK to the cave.")
+      print()
+      choice = ("You can more add to your NOTEBOOK, ENTER the Silicon Valley, to see why it feels familiar to you, or you can you can GO BACK to the cave to explore the tunnel.")
+      option=input("> ")
+      option=option.upper()
+      print()
+      print("-----------------")
+    elif option == "ENTER":
+      choice = ("OPTION: Your now have the choice to add an observation to your NOTEBOOK, or respond to the bystander FIRST: 'Well, that certainly seems to be me, doesn't it?'' Or SECOND: 'Since you know so much about me, could I give you a selfie and an autograph for you to call me an Uber to my company? That article says I work for Tesla.'")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+    elif option == "FIRST":
+      choice = ("OPTION: Access your NOTEBOOK, ACCEPT the bystander's offer, or GO BACK to the cave.")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+    elif option =="SECOND":
+      print("Random Bystander: Sounds good to me!")
+      option = "TESLA"
+    elif option == "ACCEPT":
+      option = "TESLA"
+    elif option == "TESLA":
+      choice = ("OPTION: Access your NOTEBOOK, RUN to the launch to commandeer a seat on the rocket, or GO BACK to the cave.")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+      print()
+      print("-----------------")
+    elif option == "RUN":
+      choice = ("OPTION: Access your NOTEBOOK, run away and GO BACK to the cave, or SHOOT your way onto the rocket.")
+      print(choice)
+      option = input("> ")
+      option = option.upper()
+      print()
+      print("-----------------")
+
+    elif option == "SHOOT":
+      import random
+      guard = 3
+      while guard > 0:
+          input("Press RETURN to fire:")
+          
+          if random.randint(1, 2) == 1:
+              print("You hit a guard!")
+              guard -= 1
+          else:
+              print("You miss.")
+          print(f"Guards left: {guard}")
+          print()
+
+      print("You win!")
+      option = "ONBOARD"
+    elif option == "ONBOARD":
+      choice = ("OPTION: You can access your NOTEBOOK, sit back and relax until you ARRIVE, or you can PLAY Rock, Paper, Scissors.")
+    elif option == "PLAY":
+      import random
+      import time
+      def rock_paper_scissors():
+        player1_score = 0
+        comp_score = 0
+        while True:
+          options =['Rock', 'Paper', 'Scissors']
+          options2 = ['R', 'P', 'S']
+          print("Choose your Champion: ROCK, PAPER, or SCISSORS")
+          print("Type 'R' for Rock, 'P' for Paper, and 'S' for Scissors, or 'Q' to quit.")
+          print()
+          player1 = input("> ")
+          player1 = player1.upper()
+          if player1 not in options2:
+            print("Please choose only ROCK, PAPER, or SCISSORS.")
+          comp = random.choice(options)
+          print()
+          if player1 == "R":
+            print("Your Champion: Rock")
+            if comp == "Paper":
+              print("Computer's Champion: Paper")
+              print()
+              time.sleep(0.5)
+              print("Computer wins!")
+              comp_score += 1
+            if comp == "Scissors":
+              print("Computer's Champion: Scissors")
+              print()
+              time.sleep(0.5)
+              print("You win!")
+              player1_score += 1
+            if comp == "Rock":
+              print("Computer's Champion: Rock")
+              print()
+              time.sleep(0.5)
+              print("It's a tie.")
+          if player1 == "P":
+            print("Your Champion: Paper")
+            if comp == "Paper":
+              print("Computer's Champion: Paper")
+              time.sleep(0.5)
+              print()
+              print("It's a tie.")
+            if comp == "Scissors":
+              print("Computer's Champion: Scissors")
+              time.sleep(0.5)
+              print()
+              print("Computer wins!")
+              comp_score += 1
+            if comp == "Rock":
+              print("Computer's Champion: Rock")
+              time.sleep(0.5)
+              print()
+              print("You win!") 
+              player1_score += 1
+          if player1 == "S":
+            print("Your Champion: Scissors")
+            if comp == "Rock":
+              print("Computer's Champion: Rock")
+              time.sleep(0.5)
+              print()
+              print("Computer wins!")
+              comp_score += 1
+            if comp == "Paper":
+              print("Computer's Champion: Paper")
+              time.sleep(0.5)
+              print()
+              print("You win!")
+              player1_score += 1
+            if comp == "Scissors":
+              print("Computer's Champion: Scissors")
+              time.sleep(0.5)
+              print()
+              print("It's a tie.")
+          print()
+          print(f"Your overall wins: {player1_score}")
+          print(f"Computer's overall wins: {comp_score}")
+          print()
+          if player1 == "Q":
+            break
+
+        print("Final Scores: ")
+        print(f"You: {player1_score}")
+        print(f"Computer: {comp_score}")
+        if player1_score > comp_score:
+          print("You are the Overall Champion!")
+        if comp_score < player1_score:
+          print("Computer is the Overall Champion!")
+        else:
+          print("You and computer tied for Overall Champion!")
+        print("Thanks for playing!")
+      rock_paper_scissors()
+      time.sleep(1)
+      print()
+      choice = ("OPTION: You can PLAY Rock, Paper, Scissors again, or you can WAIT until you arrive.")
+      print(choice)
+      option = ("> ")
+      option = option.upper()
+    elif option == "WAIT":
+      print("CONGRATULATIONS, YOU WIN!")
+      break
+    elif option =="CURL":
+      print("Narrator: You have lost the will to rediscover yourself. This is the end of the line.")
+      time.sleep(1)
+      print("GAME OVER")
+      option=option.upper()
+      break
+    else:
+      if option != "begin":
+        print("That is not one of your options.")
+        print(choice)
+        option = input("> ")
+        option = option.upper()
+    
+    
+
+chooseAdventure()
+
+while True:
+  print("would you like to play again?")
+  playAgain= input("yes or no: ")
+  playAgain = playAgain.upper()
+  if playAgain == "YES":
+    chooseAdventure()
+  else:
+    break
