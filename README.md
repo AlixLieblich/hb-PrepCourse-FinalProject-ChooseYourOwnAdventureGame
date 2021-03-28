@@ -1,9 +1,10 @@
 # 🌟 Hackbight Prep Course Final Project 🍎
 
+```python
 def(procrastinate):
 
   pass
-
+```
 ## 🧚‍♀️ Choose Your Own Adventure Game 🚀
 
 ### 🃏 Overview 👨‍👩‍👦
